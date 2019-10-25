@@ -1,124 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rendszergizdák project1</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Beadandó</title>
+
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-3">
-                <nav>
-                    <ul>
-                        <li>Modellek</li>
-                        <li><a href="#">hetilap</a></li>
-                        <li><a href="#">online</a></li>
-                        <li><a href="#">hetilap+online</a></li>
-                        <li><a href="#">demo</a></li>
-                        <li><a href="#">cimkéző</a></li>
-                        <li><a href="#">tanytó </a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-lg-9">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="col-lg-10">
-                            <h1>címkeajánló - HETILAP</h1>    
-                            <label for="select">Cikkek listája:</label>
-                            <select id="select"></select>
-                            <label>Valoszínűség</label>
-                            <!--kell az a csík és min 3 chekbox-->
-                        </div>
-                        <div class="col-lg-2">
-                            <button><<</button>
-                            <button><</button>
-                            <button>></button>
-                            <button>>></button>
-                            <p> P : ???
-                                R : ???
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-lg-8">
-                        <h2>Cikk szövege</h2>
-                        <p id="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sapiente accusamus minus? Aliquid repudiandae tenetur quia, itaque nobis similique quas accusantium dolor repellat quo dignissimos ab inventore beatae provident quisquam! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto hic necessitatibus laboriosam nulla, expedita beatae esse voluptates ex voluptatum, dolorem alias incidunt inventore officiis nam, laudantium odit iste perferendis eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat facere architecto quas sequi assumenda quae, repudiandae consequatur impedit tempora, reiciendis quam incidunt odio illo, eaque voluptates culpa iste perferendis autem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia temporibus accusantium tempora hic excepturi reprehenderit nihil veritatis repellat odio, id laudantium ipsam, quae saepe. Cumque iusto beatae aliquid quidem?</p>
-                    </div>
+<body id="page-top">
+	<div id="wrapper">
+		<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-                    <div class="col-lg-4">                        
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <h2>Eredeti címkék</h2>
-                                <p id="eredeti_cimkek"></p>
-                            </div>
-                            <div class="col-lg-6">
-                                <h2>Eredeti címkék (egyéb)</h2>
-                                <p id="eredeti_cimkek_egyeb"></p>
-                            </div>
-                        </div>
+		<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+			<div class="sidebar-brand-icon rotate-n-15">
+			<i class="fa fa-share-alt"></i>
+			</div>
+			<div class="sidebar-brand-text mx-3">Modellek</div>
+		</a>
 
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <h2>Ajánlott címkék</h2>
-                                <p id="ajanlott_cimkek"></p>
-                            </div>
-                            <div class="col-lg-6">
-                                <h2>Ajánlott címkék (egyéb)</h2>
-                                <p id="ajanlott_cimkek_egyeb"></p>
-                            </div>
-                        </div>
+		<hr class="sidebar-divider my-0">
 
-                    </div>
-                </div>
+		<li class="nav-item active">
+			<a class="nav-link" href="index.html">
+			<i class="fa fa-newspaper"></i>
+			<span>Hetilap</span></a>
+		</li>
 
-                <div class="row">
-                    <div class="col-lg-3">
-                        <h3></h3>
-                        <ul>
-                            <li>cikk:</li>
-                            <li>cimke:</li>
-                            <li>token:</li>
-                            <li>type:</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3">
-                        <h3></h3>
-                        <ul>
-                            <li>cikk:</li>
-                            <li>cimke:</li>
-                            <li>token:</li>
-                            <li>type:</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3">
-                        <h3></h3>
-                        <ul>
-                            <li>cikk:</li>
-                            <li>cimke:</li>
-                            <li>token:</li>
-                            <li>type:</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3">
-                        <h3></h3>
-                        <ul>
-                            <li>cikk:</li>
-                            <li>cimke:</li>
-                            <li>token:</li>
-                            <li>type:</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<hr class="sidebar-divider">
+
+		<li class="nav-item active">
+			<a class="nav-link" href="index.html">
+				<i class="fa fa-globe"></i>
+				<span>Online</span></a>
+			</li>
+
+		<hr class="sidebar-divider">
+
+		<li class="nav-item active">
+			<a class="nav-link" href="index.html">
+				<i class="fas fa-link"></i>
+				<span>Hetilap + Online</span></a>
+			</li>
+
+		<hr class="sidebar-divider">
+
+		<a class="sidebar-brand d-flex align-items-center justify-content-left" href="index.html">
+			<div class="sidebar-brand-icon rotate-n-15">
+				<i class="fa fa-tags"></i>
+			</div>
+			<div class="sidebar-brand-text mx-3">Demó</div>
+			</a>
+
+		<hr class="sidebar-divider">
+
+		<li class="nav-item active">
+			<a class="nav-link" href="index.html">
+				<i class="fas fa-user-tag"></i>
+				<span>Címkéző</span></a>
+			</li>
+
+		<hr class="sidebar-divider">
+
+		<li class="nav-item active">
+			<a class="nav-link" href="index.html">
+			<i class="fa fa-cogs"></i>
+			<span>Tanító</span></a>
+		</li>
+		
+		<div class="text-center d-none d-md-inline">
+			<button class="rounded-circle border-0" id="sidebarToggle"></button>
+		</div>
+
+		</ul>
+
+    	<div id="content-wrapper" class="d-flex flex-column">
+			<div id="content">
+				<div class="container-fluid">
+
+					<div class="d-sm-flex align-items-center justify-content-between mb-4">
+						<h1 class="h3 mb-0 text-gray-800">címkeajánló - HETILAP</h1>
+					</div>
+
+					<label for="select" style="font-weight: bold">Cikkek listája:</label>
+
+					<div class="row">
+						<div class="col-lg-8">
+							<select id="select" class="form-control">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+							
+							<div class="my-2" style="display:inline-block">
+								<span>Valószínűség:</span>
+								<span id="odds" style="font-weight: bold"></span>
+							</div>
+
+							<div class="custom-control custom-checkbox my-2" style="float: right;">
+								<input type="checkbox" class="custom-control-input" id="min3">
+								<label class="custom-control-label" for="min3">Min 3.</label>
+							</div>
+							
+							<input type="range" id="range" class="custom-range" min="0" max="1" step="0.1" value="0.8">
+						</div>
+
+						<div class="col-lg-4">
+							<button onclick="first()"><<</button>
+							<button onclick="prev()"><</button>
+							<button onclick="next()">></button>
+							<button onclick="last()">>></button>
+							<p id="p">P: 123</p>
+							<p id="r">R: 123</p>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="card shadow mb-4">
+
+								<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+									<h6 class="m-0 font-weight-bold text-primary">Cikk szövege</h6>
+								</div>
+
+								<div class="card-body">
+									<div class="chart-area">
+										<p id="text"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-6">
+
+							<div class="row">
+								<div class="col-lg-12 card shadow mb-4">
+									<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+										<h6 class="m-0 font-weight-bold text-primary">Eredeti címkék</h6>
+										<h6 class="m-0 font-weight-bold text-primary">Ajánlott címkék</h6>
+									</div>
+									<div class="card-body">
+										<p id="original"></p>
+									</div>
+									<div class="card-body">
+										<p id="suggest"></p>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-12 card shadow mb-4">
+									<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+										<h6 class="m-0 font-weight-bold text-primary">Eredeti címkék (egyéb)</h6>
+										<h6 class="m-0 font-weight-bold text-primary">Ajánlott címkék (egyéb)</h6>
+									</div>
+					
+									<div class="card-body">
+										<p id="original-other"></p>
+									</div>
+									<div class="card-body">
+										<p id="suggest-other"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-3">
+							<div class="card mb-4 py-3 border-left-primary">
+								<div class="card-body">
+									<p class="text-primary">HETILAP</p>
+									<p>cikk: 110 ezer</p>
+									<p>címke: 1023 db</p>
+									<p>token: 73 millió</p>
+									<p>type: 63 ezer</p>
+									<i class="fas fa-clipboard-list"></i>
+								</div>          
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="card mb-4 py-3 border-left-primary">
+								<div class="card-body">
+									<p class="text-primary">HETILAP+</p>
+									<p>cikk: 110 ezer</p>
+									<p>címke: 26901 db</p>
+									<p>token: 73 millió</p>
+									<p>type: 36 ezer</p>
+									<i class="fas fa-clipboard-list"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="card mb-4 py-3 border-left-success">
+								<div class="card-body">
+									<p class="text-success">ONLINE</p>
+									<p>cikk: 80 ezer</p>
+									<p>címke: 76654 db</p>
+									<p>token: 35 millió</p>
+									<p>type: 33 ezer</p>
+									<i class="fas fa-clipboard-list"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="card mb-4 py-3 border-left-info">
+								<div class="card-body">
+									<p class="text-info">HETILAP + ONLINE</p>
+									<p>cikk: 195 ezer</p>
+									<p>címke: 104432 db</p>
+									<p>token: 112 millió</p>
+									<p>type: 38 ezer</p>
+									<i class="fas fa-clipboard-list"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<footer class="sticky-footer bg-white">
+						<div class="container my-auto">
+							<div class="copyright text-center my-auto">
+								<span>Projekt &bull; 2019</span>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
     </div>
+</div>
+
+<a class="scroll-to-top rounded" href="#page-top">
+	<i class="fas fa-angle-up"></i>
+</a>
+
+	<!-- Bootstrap core JavaScript-->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Core plugin JavaScript-->
+	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Custom scripts for all pages-->
+	<script src="js/sb-admin-2.min.js"></script>
+
+	<!-- Page level plugins 
+	<script src="vendor/chart.js/Chart.min.js"></script> -->
+
+	<!-- Page level custom scripts 
+	<script src="js/demo/chart-area-demo.js"></script>
+	<script src="js/demo/chart-pie-demo.js"></script> -->
+
+	<script src="js/script.js"></script>
 </body>
 </html>

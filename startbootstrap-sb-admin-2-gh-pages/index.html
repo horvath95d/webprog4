@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,257 +13,252 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
+	<div id="wrapper">
+		<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-  <div id="wrapper">
+		<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+			<div class="sidebar-brand-icon rotate-n-15">
+			<i class="fa fa-share-alt"></i>
+			</div>
+			<div class="sidebar-brand-text mx-3">Modellek</div>
+		</a>
 
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+		<hr class="sidebar-divider my-0">
 
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fa fa-share-alt"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">Modellek</div>
-      </a>
+		<li class="nav-item active">
+			<a class="nav-link" href="index.html">
+			<i class="fa fa-newspaper"></i>
+			<span>Hetilap</span></a>
+		</li>
 
-      <hr class="sidebar-divider my-0">
+		<hr class="sidebar-divider">
 
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-          <i class="fa fa-newspaper"></i>
-          <span>Hetilap</span></a>
-      </li>
+		<li class="nav-item active">
+			<a class="nav-link" href="index.html">
+				<i class="fa fa-globe"></i>
+				<span>Online</span></a>
+			</li>
 
-      <hr class="sidebar-divider">
+		<hr class="sidebar-divider">
 
-      <li class="nav-item active">
-          <a class="nav-link" href="index.html">
-            <i class="fa fa-globe"></i>
-            <span>Online</span></a>
-        </li>
+		<li class="nav-item active">
+			<a class="nav-link" href="index.html">
+				<i class="fas fa-link"></i>
+				<span>Hetilap + Online</span></a>
+			</li>
 
-      <hr class="sidebar-divider">
+		<hr class="sidebar-divider">
 
-      <li class="nav-item active">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-link"></i>
-            <span>Hetilap + Online</span></a>
-        </li>
+		<a class="sidebar-brand d-flex align-items-center justify-content-left" href="index.html">
+			<div class="sidebar-brand-icon rotate-n-15">
+				<i class="fa fa-tags"></i>
+			</div>
+			<div class="sidebar-brand-text mx-3">Demó</div>
+			</a>
 
-      <hr class="sidebar-divider">
+		<hr class="sidebar-divider">
 
-      <a class="sidebar-brand d-flex align-items-center justify-content-left" href="index.html">
-          <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fa fa-tags"></i>
-          </div>
-          <div class="sidebar-brand-text mx-3">Demó</div>
-        </a>
+		<li class="nav-item active">
+			<a class="nav-link" href="index.html">
+				<i class="fas fa-user-tag"></i>
+				<span>Címkéző</span></a>
+			</li>
 
-      <hr class="sidebar-divider">
+		<hr class="sidebar-divider">
 
-      <li class="nav-item active">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-user-tag"></i>
-            <span>Címkéző</span></a>
-        </li>
+		<li class="nav-item active">
+			<a class="nav-link" href="index.html">
+			<i class="fa fa-cogs"></i>
+			<span>Tanító</span></a>
+		</li>
+		
+		<div class="text-center d-none d-md-inline">
+			<button class="rounded-circle border-0" id="sidebarToggle"></button>
+		</div>
 
-      <hr class="sidebar-divider">
+		</ul>
 
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-          <i class="fa fa-cogs"></i>
-          <span>Tanító</span></a>
-      </li>
-    
-      <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
+    	<div id="content-wrapper" class="d-flex flex-column">
+			<div id="content">
+				<div class="container-fluid">
 
-    </ul>
+					<div class="d-sm-flex align-items-center justify-content-between mb-4">
+						<h1 class="h3 mb-0 text-gray-800">címkeajánló - HETILAP</h1>
+					</div>
 
-    <div id="content-wrapper" class="d-flex flex-column">
+					<label for="select" style="font-weight: bold">Cikkek listája:</label>
 
-      <div id="content">
+					<div class="row">
+						<div class="col-lg-8">
+							<select id="select" class="form-control">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+							
+							<div class="my-2" style="display:inline-block">
+								<span>Valószínűség:</span>
+								<span id="odds" style="font-weight: bold"></span>
+							</div>
 
-        <div class="container-fluid">
+							<div class="custom-control custom-checkbox my-2" style="float: right;">
+								<input type="checkbox" class="custom-control-input" id="min3">
+								<label class="custom-control-label" for="min3">Min 3.</label>
+							</div>
+							
+							<input type="range" id="range" class="custom-range" min="0" max="1" step="0.1" value="0.8">
+						</div>
 
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">címkeajánló - HETILAP</h1>
-          </div>
-        <div class="col-lg-10">
-          <label for="select">Cikkek listája:</label>
-          <select id="select"></select>
-          <label>Valoszínűség:</label>
-        </div>
+						<div class="col-lg-4">
+							<button onclick="first()"><<</button>
+							<button onclick="prev()"><</button>
+							<button onclick="next()">></button>
+							<button onclick="last()">>></button>
+							<p id="p">P: 123</p>
+							<p id="r">R: 123</p>
+						</div>
+					</div>
 
-        <div class="slidecontainer">
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        </div>
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="card shadow mb-4">
 
-        <div class="col-lg-2">
-          <button><<</button>
-          <button><</button>
-          <button>></button>
-          <button>>></button>
-          <p> P : ???
-              R : ???
-          </p>
-        </div>
+								<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+									<h6 class="m-0 font-weight-bold text-primary">Cikk szövege</h6>
+								</div>
 
-          <div class="row">
+								<div class="card-body">
+									<div class="chart-area">
+										<p id="text"></p>
+									</div>
+								</div>
+							</div>
+						</div>
 
-            <div class="col-xl-8 col-lg-7">
-              <div class="card shadow mb-4">
+						<div class="col-lg-6">
 
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Cikk szövege</h6>
-                </div>
+							<div class="row">
+								<div class="col-lg-12 card shadow mb-4">
+									<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+										<h6 class="m-0 font-weight-bold text-primary">Eredeti címkék</h6>
+										<h6 class="m-0 font-weight-bold text-primary">Ajánlott címkék</h6>
+									</div>
+									<div class="card-body">
+										<p id="original"></p>
+									</div>
+									<div class="card-body">
+										<p id="suggest"></p>
+									</div>
+								</div>
+							</div>
 
-                <div class="card-body">
-                  <div class="chart-area">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, perferendis assumenda. 
-                       Perspiciatis obcaecati iure facilis minus quod facere vitae laudantium laboriosam. Commodi alias modi consectetur odit repellendus iste labore soluta? Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                       Minus itaque eius perferendis unde tempora optio minima, suscipit adipisci, totam natus iure non ullam quod. Inventore corrupti illo autem eligendi fugit.
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sint sit ducimus molestiae quidem fugiat reprehenderit maxime non? Repudiandae qui ipsa maiores dicta consectetur amet voluptates officiis natus quam aspernatur.
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur incidunt aspernatur quae iusto iste cumque beatae sint ipsam nostrum reprehenderit, accusamus optio molestiae aliquid, quasi delectus quia sed nihil doloribus?
-                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium voluptatibus magnam tempora et numquam, quasi recusandae adipisci delectus voluptas quod dolorem beatae laborum, temporibus enim officia sint facilis dolorum vel?
-                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus atque suscipit, maiores quae quibusdam perspiciatis dignissimos aut. Mollitia officiis quibusdam distinctio corporis quo deleniti non, odit voluptas aperiam dignissimos consequatur?
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+							<div class="row">
+								<div class="col-lg-12 card shadow mb-4">
+									<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+										<h6 class="m-0 font-weight-bold text-primary">Eredeti címkék (egyéb)</h6>
+										<h6 class="m-0 font-weight-bold text-primary">Ajánlott címkék (egyéb)</h6>
+									</div>
+					
+									<div class="card-body">
+										<p id="original-other"></p>
+									</div>
+									<div class="card-body">
+										<p id="suggest-other"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Eredeti címkék</h6>
-                  <h6 class="m-0 font-weight-bold text-primary">Ajánlott címkék</h6>
-                </div>
+					<div class="row">
+						<div class="col-lg-3">
+							<div class="card mb-4 py-3 border-left-primary">
+								<div class="card-body">
+									<p class="text-primary">HETILAP</p>
+									<p>cikk: 110 ezer</p>
+									<p>címke: 1023 db</p>
+									<p>token: 73 millió</p>
+									<p>type: 63 ezer</p>
+									<i class="fas fa-clipboard-list"></i>
+								</div>          
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="card mb-4 py-3 border-left-primary">
+								<div class="card-body">
+									<p class="text-primary">HETILAP+</p>
+									<p>cikk: 110 ezer</p>
+									<p>címke: 26901 db</p>
+									<p>token: 73 millió</p>
+									<p>type: 36 ezer</p>
+									<i class="fas fa-clipboard-list"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="card mb-4 py-3 border-left-success">
+								<div class="card-body">
+									<p class="text-success">ONLINE</p>
+									<p>cikk: 80 ezer</p>
+									<p>címke: 76654 db</p>
+									<p>token: 35 millió</p>
+									<p>type: 33 ezer</p>
+									<i class="fas fa-clipboard-list"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="card mb-4 py-3 border-left-info">
+								<div class="card-body">
+									<p class="text-info">HETILAP + ONLINE</p>
+									<p>cikk: 195 ezer</p>
+									<p>címke: 104432 db</p>
+									<p>token: 112 millió</p>
+									<p>type: 38 ezer</p>
+									<i class="fas fa-clipboard-list"></i>
+								</div>
+							</div>
+						</div>
+					</div>
 
-                <div class="card-body">
-                  <p>elektronikai ipar</p>
-                  <p>értékpapírpiac</p>
-                  <p>mobiltelefon</p>
-                  <p>részvény</p>
-                </div>
-
-                <div class="card-body">
-                  <p>elektronikai ipar</p>
-                  <p>értékpapírpiac</p>
-                  <p>mobiltelefon</p>
-                  <p>részvény</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-4 col-lg-5">
-            <div class="card shadow mb-4">
-              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Eredeti címkék (egyéb)</h6>
-                <h6 class="m-0 font-weight-bold text-primary">Ajánlott címkék (egyéb)</h6>
-              </div>
-
-              <div class="card-body">
-                <p>elektronikai ipar</p>
-                <p>értékpapírpiac</p>
-                <p>mobiltelefon</p>
-                <p>részvény</p>
-              </div>
-              <div class="card-body">
-                <p>elektronikai ipar</p>
-                <p>értékpapírpiac</p>
-                <p>mobiltelefon</p>
-                <p>részvény</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card mb-4 py-3 border-left-primary">
-          <div class="card-body">
-            <p class="text-primary">HETILAP</p>
-            <p>cikk: 110 ezer</p>
-            <p>címke: 1023 db</p>
-            <p>token: 73 millió</p>
-            <p>type: 63 ezer</p>
-            <i class="fas fa-clipboard-list"></i>
-          </div>          
-        </div>
-
-        <div class="card mb-4 py-3 border-left-primary">
-          <div class="card-body">
-            <p class="text-primary">HETILAP+</p>
-            <p>cikk: 110 ezer</p>
-            <p>címke: 26901 db</p>
-            <p>token: 73 millió</p>
-            <p>type: 36 ezer</p>
-            <i class="fas fa-clipboard-list"></i>
-          </div>
-        </div>
-
-        <div class="card mb-4 py-3 border-left-success">
-          <div class="card-body">
-            <p class="text-success">ONLINE</p>
-            <p>cikk: 80 ezer</p>
-            <p>címke: 76654 db</p>
-            <p>token: 35 millió</p>
-            <p>type: 33 ezer</p>
-            <i class="fas fa-clipboard-list"></i>
-          </div>          
-        </div>
-
-        <div class="card mb-4 py-3 border-left-info">
-          <div class="card-body">
-            <p class="text-info">HETILAP + ONLINE</p>
-            <p>cikk: 195 ezer</p>
-            <p>címke: 104432 db</p>
-            <p>token: 112 millió</p>
-            <p>type: 38 ezer</p>
-            <i class="fas fa-clipboard-list"></i>
-          </div>
-        </div>
-                
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Projekt &bull; 2019</span>
-          </div>
-        </div>
-      </footer>
-
+					<footer class="sticky-footer bg-white">
+						<div class="container my-auto">
+							<div class="copyright text-center my-auto">
+								<span>Projekt &bull; 2019</span>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
     </div>
+</div>
 
-  </div>
+<a class="scroll-to-top rounded" href="#page-top">
+	<i class="fas fa-angle-up"></i>
+</a>
 
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-  
-  </div>
+	<!-- Bootstrap core JavaScript-->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- Core plugin JavaScript-->
+	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+	<!-- Custom scripts for all pages-->
+	<script src="js/sb-admin-2.min.js"></script>
 
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+	<!-- Page level plugins 
+	<script src="vendor/chart.js/Chart.min.js"></script> -->
 
-  <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+	<!-- Page level custom scripts 
+	<script src="js/demo/chart-area-demo.js"></script>
+	<script src="js/demo/chart-pie-demo.js"></script> -->
 
-  <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-
+	<script src="js/script.js"></script>
 </body>
-
 </html>

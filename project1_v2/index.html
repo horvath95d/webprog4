@@ -93,7 +93,7 @@
 
 					<div class="row">
 						<div class="col-lg-8">
-							<select id="select" class="form-control">
+							<select id="select" class="form-control">								
 								<option></option>
 							</select>
 							
@@ -111,10 +111,10 @@
 						</div>
 
 						<div class="col-lg-4">
-							<button onclick="first()"><<</button>
-							<button onclick="prev()"><</button>
-							<button onclick="next()">></button>
-							<button onclick="last()">>></button>
+							<button onclick="first()" class="btn btn-light"><i class="fas fa-angle-left"></i><i class="fas fa-angle-left"></i></button>
+							<button onclick="prev()" class="btn btn-light"><i class="fas fa-angle-left"></i></button>
+							<button onclick="next()" class="btn btn-light"><i class="fas fa-angle-right"></i></button>
+							<button onclick="last()" class="btn btn-light"><i class="fas fa-angle-right"></i><i class="fas fa-angle-right"></i></button>
 							<p id="p">P: 123</p>
 							<p id="r">R: 123</p>
 						</div>
@@ -130,13 +130,13 @@
 
 								<div class="card-body">
 									<div class="chart-area">
-										
+										<p id="load"></p>
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-lg-6">
+						<div class="col-lg-6">							
 
 							<div class="row">
 								<div class="col-lg-12 card shadow mb-4">
@@ -234,7 +234,6 @@
 			</div>
 		</div>
     </div>
-</div>
 
 <a class="scroll-to-top rounded" href="#page-top">
 	<i class="fas fa-angle-up"></i>
@@ -243,6 +242,7 @@
 	<!-- JavaScript-->
 	<script src="assets/vendor/jquery/jquery.min.js"></script>
 	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 	<script src="assets/js/sb-admin-2.min.js"></script>
 	<script src="assets/js/script.js"></script>

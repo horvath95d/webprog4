@@ -32,3 +32,7 @@ function prev() {
 function last() {
     select.selectedIndex = options.length-1;
 }
+
+$.get('file:///C:/Users/Ákos/Documents/GitHub/webprog4/project1_v2/data.txt', function(data) {
+    (data)
+ }, 'text');

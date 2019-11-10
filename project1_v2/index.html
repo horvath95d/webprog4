@@ -93,8 +93,7 @@
 
 					<div class="row">
 						<div class="col-lg-8">
-							<select id="select" class="form-control">								
-								<option></option>
+							<select id="select" class="form-control" onchange="selectOnchange(this.value)">
 							</select>
 							
 							<div class="my-2" style="display:inline-block">
@@ -103,11 +102,11 @@
 							</div>
 
 							<div class="custom-control custom-checkbox my-2" style="float: right;">
-								<input type="checkbox" class="custom-control-input" id="min3">
+								<input type="checkbox" class="custom-control-input" id="min3" onchange="rangeOnchange()" checked>
 								<label class="custom-control-label" for="min3">Min 3.</label>
 							</div>
 							
-							<input type="range" id="range" class="custom-range" min="0" max="1" step="0.1" value="0.8">
+							<input type="range" id="range" class="custom-range" min="0" max="1" step="0.1" value="0.8" onchange="rangeOnchange()">
 						</div>
 
 						<div class="col-lg-4">
@@ -124,14 +123,9 @@
 						<div class="col-lg-6">
 							<div class="card shadow mb-4">
 
-								<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+								<div class="card-header">
 									<h6 class="m-0 font-weight-bold text-primary">Cikk szövege</h6>
-								</div>
-
-								<div class="card-body">
-									<div class="chart-area">
-										<p id="load"></p>
-									</div>
+									<p id="text"></p>
 								</div>
 							</div>
 						</div>
@@ -144,11 +138,13 @@
 										<h6 class="m-0 font-weight-bold text-primary">Eredeti címkék</h6>
 										<h6 class="m-0 font-weight-bold text-primary">Ajánlott címkék</h6>
 									</div>
-									<div class="card-body">
-										<p id="original"></p>
-									</div>
-									<div class="card-body">
-										<p id="suggest"></p>
+									<div class="row">
+										<div class="col-6 card-body">
+											<p id="originalLabels"></p>
+										</div>
+										<div class="col-6 card-body">
+											<p id="recommandedLabels"></p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -159,12 +155,13 @@
 										<h6 class="m-0 font-weight-bold text-primary">Eredeti címkék (egyéb)</h6>
 										<h6 class="m-0 font-weight-bold text-primary">Ajánlott címkék (egyéb)</h6>
 									</div>
-					
-									<div class="card-body">
-										<p id="original-other"></p>
-									</div>
-									<div class="card-body">
-										<p id="suggest-other"></p>
+									<div class="row">
+										<div class="col-6">
+											<p id="alsoOriginalLabels"></p>
+										</div>
+										<div class="col-6">
+											<p id="alsoRecommandedLabels"></p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -245,6 +242,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 	<script src="assets/js/sb-admin-2.min.js"></script>
+	<script src="assets/js/data.js"></script>
 	<script src="assets/js/script.js"></script>
 </body>
 </html>
